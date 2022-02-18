@@ -31,7 +31,7 @@ public class ThreeFragment extends Fragment {
         btn_go = view.findViewById(R.id.btn_go);
         et_text = view.findViewById(R.id.et_text);
         Bundle bundle = getArguments();
-        String text = bundle.getString("KAY");
+        String text = bundle.getString("KEY");
         et_text.setText(text);
         btn_go.setOnClickListener(new View.OnClickListener() {
             @Override

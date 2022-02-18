@@ -31,14 +31,14 @@ public class FourFragment extends Fragment {
         btn_go = view.findViewById(R.id.btn_go);
         et_text = view.findViewById(R.id.et_text);
         Bundle bundle = getArguments();
-        String text = bundle.getString("KAY");
+        String text = bundle.getString("KEY");
         et_text.setText(text);
         btn_go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
                 String chars = et_text.getText().toString();
-                bundle.putString("KAY", chars);
+                bundle.putString("KEY", chars);
                 Fragment fragment = new FiveFragment();
                 fragment.setArguments(bundle);
                 requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container_one, fragment).commit();

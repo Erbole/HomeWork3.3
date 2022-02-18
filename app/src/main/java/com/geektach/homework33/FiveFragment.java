@@ -26,9 +26,11 @@ public class FiveFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         et_text = view.findViewById(R.id.et_text);
-        Bundle bundle = new Bundle();
-        String text = bundle.getString("KAY");
-        et_text.setText(text);
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String username = bundle.getString("KEY");
+            et_text.setText(username);
+        }
     }
 
 }
